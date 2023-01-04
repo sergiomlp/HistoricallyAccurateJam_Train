@@ -7,6 +7,9 @@ TagManager:
   - traindestination
   - train
   - RailTrack
+  - Ground
+  - Slider
+  - Junction
   layers:
   - Default
   - TransparentFX
