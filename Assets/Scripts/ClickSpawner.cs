@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class ClickSpawner : MonoBehaviour
 {
     public GameObject[] prefabs; //Prefabs to spawn
+
+    public Canvas canvas;
 
     Camera c;
     int selectedPrefab = 0;
@@ -26,6 +30,7 @@ public class ClickSpawner : MonoBehaviour
         {
             Debug.LogError("You haven't assigned any Prefabs to spawn");
         }
+        canvas.enabled=false;
     }
 
     // Update is called once per frame
@@ -49,7 +54,6 @@ public class ClickSpawner : MonoBehaviour
                 selectedPrefab = prefabs.Length - 1;
             }
         }
-
         if (Input.GetMouseButtonDown(0) && Input.GetKey(KeyCode.LeftShift))
         {
             //Remove spawned prefab when holding left shift and left clicking
@@ -59,16 +63,50 @@ public class ClickSpawner : MonoBehaviour
                 Destroy(selectedTransform.gameObject);
             }
         }
-        else if (Input.GetMouseButtonDown(0))
+        else if (Input.GetMouseButtonDown(0)&&Input.GetKey(KeyCode.LeftControl))
         {
             //On left click spawn selected prefab and align its rotation to a surface normal
             Vector3[] spawnData = GetClickPositionAndNormal();
+
+            Transform clickedObject=GetObject();
+
+            Debug.Log(spawnData);
             if(spawnData[0] != Vector3.zero)
             {
-                GameObject go = Instantiate(prefabs[selectedPrefab], spawnData[0], Quaternion.FromToRotation(prefabs[selectedPrefab].transform.up, spawnData[1]));
-                go.name += " _instantiated";
+                if(clickedObject.tag=="Ground"&&clickedObject.tag!="RailTrack")
+                {
+                    GameObject go = Instantiate(prefabs[selectedPrefab], spawnData[0], prefabs[selectedPrefab].transform.rotation);
+                    go.name += " _instantiated";
+                }
+                
             }
         }
+        if(Input.GetMouseButtonDown(0))
+        {
+            Transform clickedObject=GetObject();
+            Debug.Log(clickedObject.tag);
+            if(clickedObject.tag=="Junction")
+            {
+                canvas.enabled=true;
+                Slider slider=canvas.GetComponent<Slider>();
+                slider.value=clickedObject.GetComponent<JunctionController>().currentActive;
+                Invoke("resetSlider",3.0f);
+            }
+        }
+        
+        // else if(Input.GetMouseButtonDown(0))
+        // {
+        //     Transform clickedObject=GetObject();
+        //     if(clickedObject.tag!="Junction")
+        //     {
+        //         canvas.enabled=false;
+        //     }
+        // }
+    }
+
+    void resetSlider()
+    {
+        canvas.enabled=false;
     }
 
     Vector3[] GetClickPositionAndNormal()
@@ -83,6 +121,17 @@ public class ClickSpawner : MonoBehaviour
         }
 
         return returnData;
+    }
+
+    Transform GetObject()
+    {
+        Ray ray = c.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit = new RaycastHit();
+        if (Physics.Raycast(ray, out hit, rayDistance))
+        {
+            return hit.transform;
+        }
+        return null;
     }
 
     Transform GetObjectOnClick()
