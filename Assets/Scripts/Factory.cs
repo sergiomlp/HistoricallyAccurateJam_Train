@@ -6,6 +6,8 @@ public class Factory : MonoBehaviour
 {
     public int type=1;
 
+    [SerializeField] ScoreCounter sc;
+
     TrainResourceManager trm;
 
     int quantityReceived=0;
@@ -34,6 +36,7 @@ public class Factory : MonoBehaviour
                 {
                     quantityReceived+=trm.quantity;
                     trm.quantity=0;
+                    sc.score=sc.score+10;
                     Debug.Log("Factory quantity = "+quantityReceived);
                 }
                 else if(trm.quantity==0)

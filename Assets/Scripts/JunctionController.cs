@@ -15,6 +15,7 @@ public class JunctionController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Junction Spawned");
         slider=GameObject.FindWithTag("Slider").GetComponent<Slider>();
         EnableIntersection(0);
         currentActive=0;

@@ -10,6 +10,10 @@ TagManager:
   - Ground
   - Slider
   - Junction
+  - wagon
+  - MainTrain
+  - Speed
+  - SliderSpeed
   layers:
   - Default
   - TransparentFX

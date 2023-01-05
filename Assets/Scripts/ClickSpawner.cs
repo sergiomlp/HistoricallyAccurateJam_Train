@@ -10,6 +10,10 @@ public class ClickSpawner : MonoBehaviour
 
     public Canvas canvas;
 
+    public Canvas speedController;
+
+    [SerializeField] ScoreCounter sc;
+
     Camera c;
     int selectedPrefab = 0;
     int rayDistance = 300;
@@ -31,6 +35,7 @@ public class ClickSpawner : MonoBehaviour
             Debug.LogError("You haven't assigned any Prefabs to spawn");
         }
         canvas.enabled=false;
+        speedController.enabled=false;
     }
 
     // Update is called once per frame
@@ -60,6 +65,7 @@ public class ClickSpawner : MonoBehaviour
             Transform selectedTransform = GetObjectOnClick();
             if (selectedTransform)
             {
+                sc.score+=5;
                 Destroy(selectedTransform.gameObject);
             }
         }
@@ -75,6 +81,7 @@ public class ClickSpawner : MonoBehaviour
             {
                 if(clickedObject.tag=="Ground"&&clickedObject.tag!="RailTrack")
                 {
+                    sc.score-=5;
                     GameObject go = Instantiate(prefabs[selectedPrefab], spawnData[0], prefabs[selectedPrefab].transform.rotation);
                     go.name += " _instantiated";
                 }
@@ -88,9 +95,18 @@ public class ClickSpawner : MonoBehaviour
             if(clickedObject.tag=="Junction")
             {
                 canvas.enabled=true;
-                Slider slider=canvas.GetComponent<Slider>();
+                Slider slider=GameObject.FindWithTag("Slider").GetComponent<Slider>();
                 slider.value=clickedObject.GetComponent<JunctionController>().currentActive;
                 Invoke("resetSlider",3.0f);
+            }
+            if(clickedObject.tag=="train"||clickedObject.tag=="wagon")
+            {
+                Debug.Log(clickedObject.transform.parent.gameObject.tag);
+                SpeedController sp=clickedObject.transform.parent.gameObject.GetComponent<SpeedController>();
+                speedController.enabled=true;
+                Slider slider=GameObject.FindWithTag("SliderSpeed").GetComponent<Slider>();
+                //Debug.Log(slider.value);
+                sp.function(slider,clickedObject.GetComponent<locomotive>().speed);
             }
         }
         
