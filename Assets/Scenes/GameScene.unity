@@ -5961,6 +5961,7 @@ GameObject:
   - component: {fileID: 819252987}
   - component: {fileID: 819252986}
   - component: {fileID: 819252985}
+  - component: {fileID: 819252989}
   m_Layer: 0
   m_Name: IronResource
   m_TagString: Untagged
@@ -6046,6 +6047,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &819252989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819252984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 990ac6eecf33a4d4ea919fb09ff473a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requestUIPrefab: {fileID: 2990685814753298641, guid: 4a1d2281f4c56164b999a90e2b382024, type: 3}
+  offset: {x: 0, y: 15, z: 0}
+  HUDcanvas: {fileID: 1128616511}
+  IsRequesting: 0
 --- !u!1 &821937986
 GameObject:
   m_ObjectHideFlags: 0
