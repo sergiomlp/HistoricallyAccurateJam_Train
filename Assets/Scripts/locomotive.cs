@@ -62,10 +62,5 @@ public class locomotive : MonoBehaviour
                 rb.velocity = transform.forward * speed;
             }
         }
-
-
-        
-
-
     }
 }

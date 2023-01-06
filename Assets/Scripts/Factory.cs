@@ -23,7 +23,7 @@ public class Factory : MonoBehaviour
     {
         
     }
-
+    /*
     void OnTriggerEnter(Collider other)
     {
         if(other.tag=="train")
@@ -45,5 +45,5 @@ public class Factory : MonoBehaviour
                 }
             }
         }
-    }
+    }*/
 }

@@ -21,7 +21,7 @@ public class ResourceCenter : MonoBehaviour
     {
         
     }
-
+    /*
     void OnTriggerEnter(Collider other)
     {
         if(other.tag=="train")
@@ -35,5 +35,5 @@ public class ResourceCenter : MonoBehaviour
                 }
             }
         }
-    }
+    }*/
 }
