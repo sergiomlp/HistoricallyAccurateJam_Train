@@ -6,7 +6,13 @@ using UnityEngine;
 public class ScoreCounter : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI textScore;
+    [SerializeField] TextMeshProUGUI moneyDisp;
     public int score=0;
+
+    public int deliveriesMissed=0;
+
+    public int money=1000;
+    public bool gameOver=false;
     
     // Start is called before the first frame update
     void Start()
@@ -18,5 +24,6 @@ public class ScoreCounter : MonoBehaviour
     void Update()
     {
         textScore.text="Score : "+score;
+        moneyDisp.text="Money : "+money;
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 
 public class ClickSpawner : MonoBehaviour
 {
@@ -17,6 +17,12 @@ public class ClickSpawner : MonoBehaviour
     Camera c;
     int selectedPrefab = 0;
     int rayDistance = 300;
+
+    [SerializeField] TextMeshProUGUI Timer;
+    [SerializeField] TextMeshProUGUI level;
+    [SerializeField] TextMeshProUGUI spice;
+    [SerializeField] TextMeshProUGUI cotton;
+    [SerializeField] TextMeshProUGUI iron;
 
     // Start is called before the first frame update
     void Start()
@@ -106,7 +112,18 @@ public class ClickSpawner : MonoBehaviour
                 speedController.enabled=true;
                 Slider slider=GameObject.FindWithTag("SliderSpeed").GetComponent<Slider>();
                 //Debug.Log(slider.value);
-                sp.function(slider,clickedObject.GetComponent<locomotive>().speed);
+                sp.function(slider,clickedObject.GetComponent<locomotive>().speed,clickedObject.GetComponent<locomotive>().maxSpeed);
+            }
+            if(clickedObject.tag=="Factory")
+            {
+                Factory fs=clickedObject.GetComponent<Factory>();
+                Timer.text="Time Left : "+fs.currentTimer;
+                level.text="Level : "+fs.level;
+                iron.text="Iron : "+fs.ironCount;
+                cotton.text="Cotton : "+fs.cottonCount;
+                spice.text="Spice : "+fs.spiceCount;
+            
+                //Debug.Log(clickedObject.GetComponent<Factory>().currentTimer);
             }
         }
         

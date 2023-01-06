@@ -110,5 +110,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0db60385843d0e948a5642c12e3e2028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quantityToGive: 100
-  type: 1
+  quantityToGive: 1
+  ResourceCenterType: 1

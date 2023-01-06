@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9174026018076432618}
   m_Layer: 0
   m_Name: Factory
-  m_TagString: Untagged
+  m_TagString: Factory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,4 +110,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4f021979f35e664e8f82018937dcbde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  FactoryType: 1
+  spiceCount: 0
+  cottonCount: 0
+  ironCount: 0
+  level: 1
+  currentNoOfDeliveries: 0
+  missedDeliveries: 0
+  sc: {fileID: 0}
+  currentTimer: 45

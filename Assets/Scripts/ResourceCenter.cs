@@ -5,8 +5,12 @@ using UnityEngine;
 public class ResourceCenter : MonoBehaviour
 {
 
-    public int quantityToGive=100;
-    public int type=1;
+    public int quantityToGive=1;
+    public int ResourceCenterType=1;
+
+    //1 for cotton
+    //2 for spice
+    //3 for iron
 
     TrainResourceManager trm;
 
@@ -27,12 +31,31 @@ public class ResourceCenter : MonoBehaviour
         if(other.tag=="train")
         {
             trm=other.GetComponent<TrainResourceManager>();
-            if(type==trm.type)
+            switch(ResourceCenterType)
             {
-                if(trm.quantity==0)
-                {
-                    trm.quantity=100;
-                }
+                case 1:
+                    if(trm.cotton>=0&&trm.quantity<=3)
+                    {
+                        trm.cotton+=1;
+                        trm.quantity++;
+                    }
+                break;
+
+                case 2:
+                    if(trm.spice>=0&&trm.quantity<=3)
+                    {
+                        trm.spice+=1;
+                        trm.quantity++;
+                    }
+                break;
+
+                case 3:
+                    if(trm.iron>=0&&trm.quantity<=3)
+                    {
+                        trm.iron+=1;
+                        trm.quantity++;
+                    }
+                break;
             }
         }
     }
