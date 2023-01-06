@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Junction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7057406343193053711
 Transform:
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996743244159997654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.68, y: 0.44, z: 7.39}
+  m_LocalPosition: {x: -1.68, y: 0.15, z: 7.39}
   m_LocalScale: {x: 1, y: 2.3812, z: 0.54383}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7d2a21d052426204d9405b110751c701, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,7 +113,7 @@ GameObject:
   m_TagString: Junction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1968574166780190742
 Transform:
@@ -218,6 +218,14 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 4.451917
       objectReference: {fileID: 0}
+    - target: {fileID: 4458644128700305133, guid: 94da07fed7596e84b976adca6c3770d1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: abcd5e15c89b3d24594fa00e155d5536, type: 2}
+    - target: {fileID: 5035888805937905179, guid: 94da07fed7596e84b976adca6c3770d1, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7506922843292449250, guid: 94da07fed7596e84b976adca6c3770d1, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -228,7 +236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7506922843292449250, guid: 94da07fed7596e84b976adca6c3770d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 7506922843292449250, guid: 94da07fed7596e84b976adca6c3770d1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -269,6 +277,10 @@ PrefabInstance:
     - target: {fileID: 7999483011458081446, guid: 94da07fed7596e84b976adca6c3770d1, type: 3}
       propertyPath: m_TagString
       value: Junction
+      objectReference: {fileID: 0}
+    - target: {fileID: 8642451261313556681, guid: 94da07fed7596e84b976adca6c3770d1, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94da07fed7596e84b976adca6c3770d1, type: 3}
@@ -377,6 +389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: D (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3072510220717496905, guid: 41029306073782b4990f660f83cc0890, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41029306073782b4990f660f83cc0890, type: 3}
 --- !u!1 &2802319410946919362 stripped
@@ -433,7 +449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4280389932643463873, guid: 5d06f682fa50c22478d1a7d6647063e7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 4280389932643463873, guid: 5d06f682fa50c22478d1a7d6647063e7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -475,6 +491,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Junction
       objectReference: {fileID: 0}
+    - target: {fileID: 8822108936057019216, guid: 5d06f682fa50c22478d1a7d6647063e7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: abcd5e15c89b3d24594fa00e155d5536, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d06f682fa50c22478d1a7d6647063e7, type: 3}
 --- !u!1 &172778339411929402 stripped
@@ -554,6 +574,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1968574166780190742}
     m_Modifications:
+    - target: {fileID: 6418356513334142513, guid: a8d53954c3dbe8d409e4ea681ade6aa1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: abcd5e15c89b3d24594fa00e155d5536, type: 2}
     - target: {fileID: 7015996101757193553, guid: a8d53954c3dbe8d409e4ea681ade6aa1, type: 3}
       propertyPath: m_Name
       value: RailWay_03
@@ -572,7 +596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8065952451219807911, guid: a8d53954c3dbe8d409e4ea681ade6aa1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 8065952451219807911, guid: a8d53954c3dbe8d409e4ea681ade6aa1, type: 3}
       propertyPath: m_LocalPosition.z
