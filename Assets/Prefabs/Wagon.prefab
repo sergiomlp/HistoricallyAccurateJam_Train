@@ -145,7 +145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2940483114820151253}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2.56}
+  m_LocalPosition: {x: 0, y: 1.8, z: -3.85}
   m_LocalScale: {x: 1, y: 1, z: 1.4131343}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -275,6 +275,8 @@ MonoBehaviour:
   speed: 3
   turningSpeed: 2
   destinationSensor: {fileID: 2940483114774364680}
+  isWagon: 1
+  joint: {fileID: 0}
 --- !u!65 &3909550635661135322
 BoxCollider:
   m_ObjectHideFlags: 0
