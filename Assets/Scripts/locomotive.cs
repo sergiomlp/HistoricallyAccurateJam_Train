@@ -23,6 +23,11 @@ public class locomotive : MonoBehaviour
         
     }
 
+    void OnAwake()
+    {
+        
+    }
+
     // Update is called once per frame
     void Update()
     {

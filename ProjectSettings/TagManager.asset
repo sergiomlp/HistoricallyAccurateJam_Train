@@ -5,6 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - traindestination
+  - train
+  - RailTrack
+  - Ground
+  - Slider
+  - Junction
+  - wagon
+  - MainTrain
+  - Speed
+  - SliderSpeed
   layers:
   - Default
   - TransparentFX

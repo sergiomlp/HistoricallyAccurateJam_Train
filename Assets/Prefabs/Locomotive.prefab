@@ -125,8 +125,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2940483114774364680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4.08}
-  m_LocalScale: {x: 2.791666, y: 1.4222, z: 4.9568048}
+  m_LocalPosition: {x: 0, y: 0, z: 1.58}
+  m_LocalScale: {x: 0.9339798, y: 2.947794, z: 1.5754709}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2940483115599894346}
@@ -315,9 +315,12 @@ GameObject:
   - component: {fileID: 2940483115599894346}
   - component: {fileID: 2940483115599894348}
   - component: {fileID: 2940483115599894351}
+  - component: {fileID: 7431917}
+  - component: {fileID: 7431913}
+  - component: {fileID: 7431921}
   m_Layer: 0
   m_Name: Locomotive
-  m_TagString: Untagged
+  m_TagString: train
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -373,6 +376,45 @@ MonoBehaviour:
   speed: 3
   turningSpeed: 2
   destinationSensor: {fileID: 2940483114774364680}
+--- !u!65 &7431917
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2940483115599894326}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3254509, y: 1.0569558, z: 4.2177696}
+  m_Center: {x: -0.051755905, y: -0.028477907, z: -0.005411148}
+--- !u!114 &7431913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2940483115599894326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26c1cfc64b7596e4a833d989e0d40a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quantity: 0
+  type: 1
+--- !u!114 &7431921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2940483115599894326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 801da811df3d57348a7b6ed26196f189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2940483115697559007
 GameObject:
   m_ObjectHideFlags: 0
