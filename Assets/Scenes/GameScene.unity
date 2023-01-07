@@ -28206,7 +28206,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 40738836135200241812f6a86c8991f6, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
@@ -28303,13 +28303,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29058c50cf4bbef40a93cfffc0e02000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EarnMoney: {fileID: 0}
-  Brake: {fileID: 0}
-  UpgradeButton: {fileID: 0}
-  Crash: {fileID: 0}
-  trainHorn: {fileID: 0}
-  ResocureGet: {fileID: 0}
-  RequestSound: {fileID: 0}
+  EarnMoney: {fileID: 1814009040}
+  Brake: {fileID: 1814009039}
+  UpgradeButton: {fileID: 1814009038}
+  Crash: {fileID: 1814009037}
+  trainHorn: {fileID: 1814009036}
+  ResocureGet: {fileID: 1814009042}
+  RequestSound: {fileID: 1814009043}
 --- !u!1 &1818061519
 GameObject:
   m_ObjectHideFlags: 0

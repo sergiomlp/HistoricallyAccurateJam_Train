@@ -29,6 +29,7 @@ public class UI_GameOverControl : MonoBehaviour
 
     private void OnTrainCrash()
     {
+        Manager_Audio.GetInstance().Crash.Play();
         GameOver();
     }
 
