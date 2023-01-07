@@ -10,9 +10,9 @@ public class TrainCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag=="train"||other.tag=="wagon")
+        if (other.tag == "train" || other.tag == "wagon")
         {
-            if(other.transform.parent.gameObject.name!=transform.parent.gameObject.name)
+            if (other.transform.parent.gameObject.name != transform.parent.gameObject.name)
             {
                 trainCrash();
             }
@@ -21,6 +21,10 @@ public class TrainCollision : MonoBehaviour
         {
             UI_CoalMeter.coalRemain = UI_CoalMeter.coalMax;
             UI_CoalMeter.coalTimer = 30f;
+        }
+        else if (other.tag == "RefilDepot")
+        {
+            UI_CoalMeter.coalRemain += 1;
         }
     }
 
