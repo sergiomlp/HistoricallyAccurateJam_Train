@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class locomotive : MonoBehaviour
 {
-
+    [SerializeField] private locomotive trainHead;
     public float speed = 10;
+    public float maxspeed = 10;
     private Rigidbody rb;
     //public GameObject destination;
 
@@ -22,8 +23,6 @@ public class locomotive : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
-
     }
 
     void OnAwake()
@@ -52,6 +51,7 @@ public class locomotive : MonoBehaviour
         else
         {
             float distance = Vector3.Distance(transform.position, joint.position);
+            speed = trainHead.speed;
             if (distance > 0.5f)
             {
                 Vector3 lookPos = joint.position - transform.position;
