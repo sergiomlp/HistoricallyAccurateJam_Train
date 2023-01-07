@@ -38,6 +38,16 @@ public class UI_GameOverControl : MonoBehaviour
         gameOverUI.SetActive(true);
     }
 
+    public void RetryBtn()
+    {        
+
+    }
+
+    public void MenuBtn()
+    {
+
+    }
+
     private void OnDisable()
     {
         trainHead.trainCrash -= OnTrainCrash;
