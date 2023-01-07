@@ -45,6 +45,7 @@ public class Manager_TrainResourceManager : MonoBehaviour
     {
         instance = this;
         SetupInitialWagon();
+        UI_Wagon.wagonEmpty += OnWargonRemove;
     }
 
     private void SetupInitialWagon()
@@ -532,7 +533,6 @@ public class Manager_TrainResourceManager : MonoBehaviour
     {
         for (int i = 0; i < currentWagon; ++i)
         {
-            Debug.Log(amount + ""+ currentCottonResource+""+currentIronResource+""+currentSpiceResource+""+currentLuxuryResource);
             if (amount == 0) { return; }
             if (wagonResourcesList[i].wagonResource != resource) continue;
             else
@@ -546,5 +546,42 @@ public class Manager_TrainResourceManager : MonoBehaviour
                 amount -= 1;
             }
         }        
+    }
+
+    private void OnWargonRemove(int index)
+    {        
+        if (wagonResourcesList[index].wagonResource != FactoryResources.Empty)
+        {
+            if (wagonResourcesList[index].wagonResource == FactoryResources.Iron)
+            {
+                DeductSpecificCargo(index, FactoryResources.Iron);
+            }
+            else if (wagonResourcesList[index].wagonResource == FactoryResources.Cotton)
+            {
+                DeductSpecificCargo(index, FactoryResources.Cotton);
+            }
+            else if (wagonResourcesList[index].wagonResource == FactoryResources.Spice)
+            {
+                DeductSpecificCargo(index, FactoryResources.Spice);
+            }
+            else if (wagonResourcesList[index].wagonResource == FactoryResources.Luxury)
+            {
+                DeductSpecificCargo(index, FactoryResources.Luxury);
+            }
+        }
+    }
+    private void DeductSpecificCargo(int index, FactoryResources resource)
+    {
+        wagonResourcesList[index].wagonResource = FactoryResources.Empty;
+        if (resource == FactoryResources.Iron) { currentIronResource -= 1; }
+        else if (resource == FactoryResources.Cotton) { currentCottonResource -= 1; }
+        else if (resource == FactoryResources.Spice) { currentSpiceResource -= 1; }
+        else { currentLuxuryResource -= 1; }
+        wagonUpdate(index, FactoryResources.Empty);
+    }
+
+    private void OnDisable()
+    {
+        UI_Wagon.wagonEmpty -= OnWargonRemove;
     }
 }

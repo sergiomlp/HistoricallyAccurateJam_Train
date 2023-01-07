@@ -365,7 +365,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 29594877}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048592347}
+        m_TargetAssemblyTypeName: UI_Wagon, Assembly-CSharp
+        m_MethodName: WagonButton7
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &29594877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3041,7 +3053,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 403124246}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048592347}
+        m_TargetAssemblyTypeName: UI_Wagon, Assembly-CSharp
+        m_MethodName: WagonButton4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &403124246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4104,7 +4128,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 547048843}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048592347}
+        m_TargetAssemblyTypeName: UI_Wagon, Assembly-CSharp
+        m_MethodName: WagonButton2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &547048843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6471,7 +6507,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 964973070}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048592347}
+        m_TargetAssemblyTypeName: UI_Wagon, Assembly-CSharp
+        m_MethodName: WagonButton8
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &964973070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8100,7 +8148,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1150818555}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048592347}
+        m_TargetAssemblyTypeName: UI_Wagon, Assembly-CSharp
+        m_MethodName: WagonButton5
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1150818555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10079,7 +10139,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1366126981}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048592347}
+        m_TargetAssemblyTypeName: UI_Wagon, Assembly-CSharp
+        m_MethodName: WagonButton3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1366126981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11588,6 +11660,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2dde933ac1d0a14dac798dfe34b579d, type: 3}
+--- !u!1 &1588809695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1588809697}
+  - component: {fileID: 1588809696}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1588809696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588809695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 6a1722e85e43a904593b996eb50fb0fb, type: 2}
+--- !u!4 &1588809697
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588809695}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -115.235054, y: -209.86961, z: 269.1119}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1611282330 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5328732657869852628, guid: 2eb8d8c6d1b5c704faa7f322aa792cf3, type: 3}
@@ -11979,7 +12100,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1670650142}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048592347}
+        m_TargetAssemblyTypeName: UI_Wagon, Assembly-CSharp
+        m_MethodName: WagonButton6
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1670650142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12185,7 +12318,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1708744157}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048592347}
+        m_TargetAssemblyTypeName: UI_Wagon, Assembly-CSharp
+        m_MethodName: WagonButton1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1708744157
 MonoBehaviour:
   m_ObjectHideFlags: 0
