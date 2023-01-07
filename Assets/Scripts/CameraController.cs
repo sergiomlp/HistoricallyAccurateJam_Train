@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour
     public Vector3 newZoom;
 
     public Vector3 dragStartPosition;
-    public Vector3 dragCurrentPosition;
+    public Vector3 dragCurrentPosition;    
 
     // Start is called before the first frame update
     void Start()
@@ -90,19 +90,32 @@ public class CameraController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
-            newPosition += (transform.forward) * movementSpeed;
+            //x=70 -90 z = 300 400
+            if (transform.position.x > -70f && transform.position.z < 400f)
+            {
+                newPosition += (transform.forward + -transform.right).normalized * movementSpeed;
+            }
         }
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            newPosition += (transform.forward) * -movementSpeed;
+            if (transform.position.x < 90f && transform.position.z > 300f)
+            {
+                newPosition += (transform.forward + -transform.right) * -movementSpeed;
+            }
         }
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            newPosition += (transform.right) * -movementSpeed;
+            if (transform.position.x > -70f && transform.position.z > 300f)
+            {
+                newPosition += (transform.right + transform.forward).normalized * -movementSpeed;
+            }
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            newPosition += (transform.right) * movementSpeed;
+            if (transform.position.x < 90f && transform.position.z < 400f)
+            {
+                newPosition += (transform.right + transform.forward).normalized * movementSpeed;
+            }
         }
 
         if (Input.GetKey(KeyCode.Q))
