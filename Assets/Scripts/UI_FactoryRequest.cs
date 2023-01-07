@@ -33,6 +33,7 @@ public class UI_FactoryRequest : MonoBehaviour
     void Start()
     {
         uiUse = Instantiate(requestUIPrefab, HUDcanvas.transform);
+        uiUse.transform.SetSiblingIndex(0);
         uiUse.gameObject.SetActive(false);
         GetValue();
         factoryRequest = transform.GetComponent<Mechanic_FactoryRequest>();
