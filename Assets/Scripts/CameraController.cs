@@ -16,6 +16,8 @@ public class CameraController : MonoBehaviour
     public Vector3 newPosition;
 
     public Vector3 zoomAmount;
+    private Camera _camera;
+    private float zoom_speed = 1f;
 
     public float rotationAmount;
     public Quaternion newRotation;
@@ -31,6 +33,7 @@ public class CameraController : MonoBehaviour
         newPosition = transform.position;
         newRotation = transform.rotation;
         newZoom = cameraTransform.localPosition;
+        _camera = transform.GetChild(0).GetComponent<Camera>();
     }
 
     // Update is called once per frame
@@ -44,9 +47,14 @@ public class CameraController : MonoBehaviour
     {
         if (Input.mouseScrollDelta.y != 0)
         {
-            newZoom += Input.mouseScrollDelta.y * zoomAmount;
+            if (_camera.orthographicSize > 30f && Input.mouseScrollDelta.y > 0)
+                _camera.orthographicSize -= Input.mouseScrollDelta.y * zoom_speed;
+            else if (_camera.orthographicSize < 60f && Input.mouseScrollDelta.y < 0)
+            {
+                _camera.orthographicSize -= Input.mouseScrollDelta.y * zoom_speed;
+            }
         }
-
+        /*
         if (Input.GetMouseButton(0))
         {
             Plane plane = new Plane(Vector3.up, Vector3.zero);
@@ -74,7 +82,7 @@ public class CameraController : MonoBehaviour
 
                 newPosition = transform.position + dragStartPosition - dragCurrentPosition;
             }
-        }
+        }*/
     }
 
     void HandleMovementInput()

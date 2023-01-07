@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class UI_UpgradeButton : MonoBehaviour
 {
+    [SerializeField] private Text upCoalMeterLevelText;
+    [SerializeField] private Text upCoalMeterCostText;
     [SerializeField] private Text addCargoLevelText;
     [SerializeField] private Text addCargoCostText;
     [SerializeField] private Text upEngineLevelText;
@@ -16,6 +18,8 @@ public class UI_UpgradeButton : MonoBehaviour
     [SerializeField] private Text doubleCostText;
     [SerializeField] private GameObject upgradeMenu;
 
+    private int currentCoalMeterLevel;
+    private int currentCoalMeterCost;
     private int currentcargoLevel;
     private int currentcargoCost;
     private int currentcargoIndex;
@@ -32,6 +36,8 @@ public class UI_UpgradeButton : MonoBehaviour
 
     void Start()
     {
+        currentCoalMeterLevel = 1;
+        currentCoalMeterCost = 1;
         currentcargoLevel = 1;
         currentcargoCost = 3;
         currentcargoIndex = 3;
@@ -52,6 +58,31 @@ public class UI_UpgradeButton : MonoBehaviour
         else
         {
             upgradeMenu.SetActive(true);
+        }
+    }
+
+    public void UpCoalMeter()
+    {
+        if (currentCoalMeterLevel < 9)
+        {
+            if (UI_Money_Score_GameOverCount.currentMoney >= currentCoalMeterCost)
+            {
+                UI_Money_Score_GameOverCount.currentMoney -= currentCoalMeterCost;
+                moneyUpdate.currentMoneyText.text = UI_Money_Score_GameOverCount.currentMoney.ToString() + "K";
+                UI_CoalMeter.coalMax += 1;
+                currentCoalMeterLevel++;
+                currentCoalMeterCost += 1;
+                if (currentCoalMeterLevel == 9)
+                {
+                    upCoalMeterLevelText.text = "Lv. max";
+                    upCoalMeterCostText.text = "";
+                }
+                else
+                {
+                    upCoalMeterLevelText.text = "Lv. " + currentCoalMeterLevel.ToString();
+                    upCoalMeterCostText.text = currentcargoCost.ToString() + "K";
+                }
+            }
         }
     }
 
