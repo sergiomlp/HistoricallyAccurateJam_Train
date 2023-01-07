@@ -6,7 +6,9 @@ using UnityEngine;
 public class UI_GameOverControl : MonoBehaviour
 {
     [SerializeField] TrainCollision trainHead;
+    [SerializeField] locomotive trainHeadLoco;
     [SerializeField] UI_Money_Score_GameOverCount failCounter;
+    [SerializeField] GameObject gameOverUI;
 
     void Start()
     {
@@ -29,7 +31,8 @@ public class UI_GameOverControl : MonoBehaviour
 
     private void GameOver()
     {
-        throw new NotImplementedException();
+        trainHeadLoco.maxspeed = 0;
+        gameOverUI.SetActive(true);
     }
 
     private void OnDisable()
