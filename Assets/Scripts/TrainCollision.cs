@@ -6,6 +6,7 @@ public class TrainCollision : MonoBehaviour
 {
     public delegate void GameOver();
     public event GameOver trainCrash;
+    [SerializeField] UI_CoalMeter coalFill;
 
     void OnTriggerEnter(Collider other)
     {
@@ -15,6 +16,11 @@ public class TrainCollision : MonoBehaviour
             {
                 trainCrash();
             }
+        }
+        else if (other.tag == "TrainStation")
+        {
+            UI_CoalMeter.coalRemain = UI_CoalMeter.coalMax;
+            UI_CoalMeter.coalTimer = 30f;
         }
     }
 

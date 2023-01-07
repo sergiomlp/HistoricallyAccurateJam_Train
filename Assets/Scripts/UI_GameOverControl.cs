@@ -31,4 +31,10 @@ public class UI_GameOverControl : MonoBehaviour
     {
         throw new NotImplementedException();
     }
+
+    private void OnDisable()
+    {
+        trainHead.trainCrash -= OnTrainCrash;
+        failCounter.fail -= OnFail;
+    }
 }

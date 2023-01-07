@@ -10,6 +10,10 @@ public class Mechanic_FactoryRequest : MonoBehaviour
     public Mechanic_FactoryRequest instance;
     public Mechanic_FactoryRequest getInstance() { return instance; }
 
+    [SerializeField] private float level1requestTime = 180f;
+    [SerializeField] private float level2requestTime = 120f;
+    [SerializeField] private float level3requestTime = 90f;
+
     private float requestRandomTimer;
     [SerializeField] private type FactoryType;
     public float deliveryTimer;
@@ -95,8 +99,8 @@ public class Mechanic_FactoryRequest : MonoBehaviour
         {
             currentRequestLevel = requestRandom;
             firstRequestValue = Random.Range(1, 3);
-            deliveryTimer = 45f;
-            maxDeliveryTimer = 45f;
+            deliveryTimer = level1requestTime;
+            maxDeliveryTimer = level1requestTime;
             requestEvent(currentRequestLevel, firstRequestValue, firstRequestResource, 0, secondRequestResource, 0, thirdRequestResource);
             isRequesting = true;
             RandomRequestTime();
@@ -105,8 +109,8 @@ public class Mechanic_FactoryRequest : MonoBehaviour
         {
             currentRequestLevel = requestRandom;
             firstRequestValue = Random.Range(1, 3);
-            deliveryTimer = 30f;
-            maxDeliveryTimer = 30f;
+            deliveryTimer = level1requestTime;
+            maxDeliveryTimer = level1requestTime;
             requestEvent(currentRequestLevel, firstRequestValue, firstRequestResource, 0, secondRequestResource, 0, thirdRequestResource);
             isRequesting = true;
             RandomRequestTime();
@@ -116,8 +120,8 @@ public class Mechanic_FactoryRequest : MonoBehaviour
             currentRequestLevel = requestRandom;
             firstRequestValue = Random.Range(1, 3);
             secondRequestValue = Random.Range(1, 2);
-            deliveryTimer = 30f;
-            maxDeliveryTimer = 30f;
+            deliveryTimer = level2requestTime;
+            maxDeliveryTimer = level2requestTime;
             requestEvent(currentRequestLevel, firstRequestValue, firstRequestResource, secondRequestValue, secondRequestResource, 0, thirdRequestResource);
             isRequesting = true;
             RandomRequestTime();
@@ -127,8 +131,8 @@ public class Mechanic_FactoryRequest : MonoBehaviour
             currentRequestLevel = requestRandom;
             firstRequestValue = Random.Range(1, 4);
             secondRequestValue = Random.Range(0, 2);
-            deliveryTimer = 30f;
-            maxDeliveryTimer = 30f;
+            deliveryTimer = level3requestTime;
+            maxDeliveryTimer = level3requestTime;
             requestEvent(currentRequestLevel, firstRequestValue, firstRequestResource, secondRequestValue, secondRequestResource, 0, thirdRequestResource);
             isRequesting = true;
             RandomRequestTime();
