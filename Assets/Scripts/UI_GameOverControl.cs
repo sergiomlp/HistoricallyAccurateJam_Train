@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UI_GameOverControl : MonoBehaviour
@@ -39,13 +40,13 @@ public class UI_GameOverControl : MonoBehaviour
     }
 
     public void RetryBtn()
-    {        
-
+    {
+        SceneManager.LoadScene(1);
     }
 
     public void MenuBtn()
     {
-
+        SceneManager.LoadScene(0);
     }
 
     private void OnDisable()
