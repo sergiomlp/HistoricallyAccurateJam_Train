@@ -10,7 +10,7 @@ public class UI_Resource : MonoBehaviour
     [SerializeField] private Vector3 offset = new Vector3(0, 15f, 0);
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         requestUIPrefab.transform.position = Camera.main.WorldToScreenPoint(transform.position + offset);
     }
