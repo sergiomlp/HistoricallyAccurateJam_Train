@@ -1,7 +1,8 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI_GameOverControl : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class UI_GameOverControl : MonoBehaviour
     [SerializeField] locomotive trainHeadLoco;
     [SerializeField] UI_Money_Score_GameOverCount failCounter;
     [SerializeField] GameObject gameOverUI;
+    [SerializeField] Text gdpText;
 
     void Start()
     {
@@ -32,6 +34,7 @@ public class UI_GameOverControl : MonoBehaviour
     private void GameOver()
     {
         trainHeadLoco.maxspeed = 0;
+        gdpText.text = "£ " + UI_Money_Score_GameOverCount.score*1000;
         gameOverUI.SetActive(true);
     }
 
