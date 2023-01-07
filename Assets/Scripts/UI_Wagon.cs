@@ -21,6 +21,7 @@ public class UI_Wagon : MonoBehaviour
     {
         wagonButtonObject[index].gameObject.SetActive(true);
         wagonObject[index].gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        wagonObject[index].gameObject.GetComponent<BoxCollider>().enabled = true;
     }
 
     private void OnWagonUpdate(int wagonIndex, Manager_TrainResourceManager.FactoryResources factoryResource)
