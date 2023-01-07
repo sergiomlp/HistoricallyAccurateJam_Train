@@ -153,6 +153,7 @@ public class Mechanic_FactoryRequest : MonoBehaviour
             isRequesting = true;
             RandomRequestTime();
         }
+        Manager_Audio.GetInstance().RequestSound.Play();
     }
 
     public void SuccessfulDelivery()

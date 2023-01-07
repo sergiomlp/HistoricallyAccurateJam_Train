@@ -72,6 +72,7 @@ public class UI_UpgradeButton : MonoBehaviour
                 UI_CoalMeter.coalMax += 1;
                 currentCoalMeterLevel++;
                 currentCoalMeterCost += 1;
+                Manager_Audio.GetInstance().UpgradeButton.Play();
                 if (currentCoalMeterLevel == 9)
                 {
                     upCoalMeterLevelText.text = "Lv. max";
@@ -92,6 +93,7 @@ public class UI_UpgradeButton : MonoBehaviour
         {
             if (UI_Money_Score_GameOverCount.currentMoney >= currentcargoCost)
             {
+                Manager_Audio.GetInstance().UpgradeButton.Play();
                 UI_Money_Score_GameOverCount.currentMoney -= currentcargoCost;
                 moneyUpdate.currentMoneyText.text = UI_Money_Score_GameOverCount.currentMoney.ToString() + "K";
                 Manager_TrainResourceManager.currentWagon++;
@@ -119,6 +121,7 @@ public class UI_UpgradeButton : MonoBehaviour
         {
             if (UI_Money_Score_GameOverCount.currentMoney >= currentengineCost)
             {
+                Manager_Audio.GetInstance().UpgradeButton.Play();
                 UI_Money_Score_GameOverCount.currentMoney -= currentengineCost;
                 moneyUpdate.currentMoneyText.text = UI_Money_Score_GameOverCount.currentMoney.ToString() + "K";
                 trainHead.maxspeed += 3;
@@ -146,6 +149,7 @@ public class UI_UpgradeButton : MonoBehaviour
         {
             if (UI_Money_Score_GameOverCount.currentMoney >= currentbrakeCost)
             {
+                Manager_Audio.GetInstance().UpgradeButton.Play();
                 UI_Money_Score_GameOverCount.currentMoney -= currentbrakeCost;
                 moneyUpdate.currentMoneyText.text = UI_Money_Score_GameOverCount.currentMoney.ToString() + "K";
                 UI_TrainBrakeController.brakeAccelSpeed -= 0.5f;
@@ -170,6 +174,7 @@ public class UI_UpgradeButton : MonoBehaviour
         {
             if (UI_Money_Score_GameOverCount.currentMoney >= currentdoubleCost)
             {
+                Manager_Audio.GetInstance().UpgradeButton.Play();
                 UI_Money_Score_GameOverCount.currentMoney -= currentdoubleCost;
                 moneyUpdate.currentMoneyText.text = UI_Money_Score_GameOverCount.currentMoney.ToString() + "K";
                 Manager_TrainResourceManager.GetTrainResourceInstance().isDoubleGoods = true;

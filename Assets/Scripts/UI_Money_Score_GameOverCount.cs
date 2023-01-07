@@ -42,7 +42,7 @@ public class UI_Money_Score_GameOverCount : MonoBehaviour
         incomeAnimation.Play();
         currentMoney += value;
         currentMoneyText.text = currentMoney.ToString() + "K";
-
+        Manager_Audio.GetInstance().EarnMoney.Play();
         score += value;
         scoreText.text = score.ToString();
     }

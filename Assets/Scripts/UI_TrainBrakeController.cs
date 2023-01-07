@@ -42,12 +42,14 @@ public class UI_TrainBrakeController : MonoBehaviour
         {
             timer = 0;
             brakeImage.sprite = brakeSprite[0];
+            Manager_Audio.GetInstance().Brake.Play();
             isBrake = true;
         }
         else
         {
             timer = 0;
             brakeImage.sprite = brakeSprite[1];
+            Manager_Audio.GetInstance().trainHorn.Play();
             isBrake = false;
         }
     }

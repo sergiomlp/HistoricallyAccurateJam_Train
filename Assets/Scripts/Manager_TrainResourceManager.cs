@@ -129,6 +129,7 @@ public class Manager_TrainResourceManager : MonoBehaviour
                 }
                 wagonResourcesList[i].wagonResource = cargo;
                 wagonUpdate(i, cargo);
+                Manager_Audio.GetInstance().ResocureGet.Play();
                 allWagonFull= false;
                 return;
             }
