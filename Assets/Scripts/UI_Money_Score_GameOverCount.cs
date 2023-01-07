@@ -18,6 +18,9 @@ public class UI_Money_Score_GameOverCount : MonoBehaviour
     public static int failCount;
     [SerializeField] Text failCountText;
 
+    public delegate void GameOver();
+    public event GameOver fail;
+
     void Start()
     {
         Manager_TrainResourceManager.scoreMoneyUpdate += OnMoneyUpdate;

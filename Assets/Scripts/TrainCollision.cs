@@ -4,17 +4,8 @@ using UnityEngine;
 
 public class TrainCollision : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public delegate void GameOver();
+    public event GameOver trainCrash;
 
     void OnTriggerEnter(Collider other)
     {
@@ -22,7 +13,7 @@ public class TrainCollision : MonoBehaviour
         {
             if(other.transform.parent.gameObject.name!=transform.parent.gameObject.name)
             {
-                Debug.Log("GameOver");
+                trainCrash();
             }
         }
     }
