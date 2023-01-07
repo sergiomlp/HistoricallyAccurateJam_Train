@@ -317,7 +317,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4116aec4e47df2149a2c6e95610c4888, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.15
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -12113,7 +12113,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fde3e530ffaf68243b82345fa9620607, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af5df91360ff960488a58754a100fb23, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20234,7 +20234,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6363028636755138101, guid: 2eb8d8c6d1b5c704faa7f322aa792cf3, type: 3}
   m_PrefabInstance: {fileID: 1314163975}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1941052530}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 487d068fa9403e048ace6d95b7d4a18d, type: 3}
@@ -20250,7 +20250,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8106678363961255819, guid: 2eb8d8c6d1b5c704faa7f322aa792cf3, type: 3}
   m_PrefabInstance: {fileID: 1314163975}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1941052530}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 801da811df3d57348a7b6ed26196f189, type: 3}
@@ -30956,6 +30956,107 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5425457955774933889, guid: 0c3ce1f14e44a3644a7224d769772cf6, type: 3}
   m_PrefabInstance: {fileID: 1921416644}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1941052530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6363028636755138124, guid: 2eb8d8c6d1b5c704faa7f322aa792cf3, type: 3}
+  m_PrefabInstance: {fileID: 1314163975}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1941052533
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941052530}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7a7521115186d87468e05a174da5471d, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1950597113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31171,7 +31272,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4f8a2779aa1934d42b7f8910b4046b7f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fde3e530ffaf68243b82345fa9620607, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
