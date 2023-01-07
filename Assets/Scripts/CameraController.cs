@@ -24,7 +24,7 @@ public class CameraController : MonoBehaviour
     public Vector3 newZoom;
 
     public Vector3 dragStartPosition;
-    public Vector3 dragCurrentPosition;    
+    public Vector3 dragCurrentPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +52,39 @@ public class CameraController : MonoBehaviour
             else if (_camera.orthographicSize < 60f && Input.mouseScrollDelta.y < 0)
             {
                 _camera.orthographicSize -= Input.mouseScrollDelta.y * zoom_speed;
+            }
+        }
+
+        Vector2 mousePos = Input.mousePosition;
+        Debug.Log(mousePos);
+        // Calculate screen size, ratio
+
+        if(mousePos.x / Screen.width <= 0.05f )
+        {
+            if (transform.position.x > -70f && transform.position.z > 300f)
+            {
+                newPosition += (transform.right + transform.forward).normalized * -movementSpeed;
+            }
+        }
+        else if(mousePos.x / Screen.width >= 0.95f)
+        {
+            if (transform.position.x < 90f && transform.position.z < 400f)
+            {
+                newPosition += (transform.right + transform.forward).normalized * movementSpeed;
+            }
+        }
+        if(mousePos.y / Screen.height >= 0.95f)
+        {
+            if (transform.position.x > -70f && transform.position.z < 400f)
+            {
+                newPosition += (transform.forward + -transform.right).normalized * movementSpeed;
+            }
+        }
+        else if (mousePos.y / Screen.height <= 0.05f)
+        {
+            if (transform.position.x < 90f && transform.position.z > 300f)
+            {
+                newPosition += (transform.forward + -transform.right).normalized * -movementSpeed;
             }
         }
         /*
@@ -108,7 +141,7 @@ public class CameraController : MonoBehaviour
         {
             if (transform.position.x < 90f && transform.position.z > 300f)
             {
-                newPosition += (transform.forward + -transform.right) * -movementSpeed;
+                newPosition += (transform.forward + -transform.right).normalized * -movementSpeed;
             }
         }
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
