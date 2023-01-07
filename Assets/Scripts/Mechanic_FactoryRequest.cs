@@ -66,21 +66,14 @@ public class Mechanic_FactoryRequest : MonoBehaviour
             }
             else
             {
-<<<<<<< Updated upstream
-                // add static fail count event
-                requestReset(); 
-                OnRequestFailed();
-                isRequesting = false;
-=======
                 deliveryTimer -= Time.deltaTime;
                 if (deliveryTimer < 0)
                 {
-                    // add static fail count event
                     requestReset();
                     OnRequestFailed();
                     isRequesting = false;
                 }
->>>>>>> Stashed changes
+
             }
         }
     }
