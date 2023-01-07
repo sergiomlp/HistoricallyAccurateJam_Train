@@ -37,6 +37,7 @@ public class Manager_TrainResourceManager : MonoBehaviour
     private wagonAndResource[] wagonResourcesList = new wagonAndResource[8];
 
     private bool allWagonFull;
+    public bool isDoubleGoods;
 
     public static event Action<int, FactoryResources> wagonUpdate;
     public static event Action<int> scoreMoneyUpdate;
@@ -63,15 +64,31 @@ public class Manager_TrainResourceManager : MonoBehaviour
         {
             case "IronResource":
                 CheckIfWagonEmptyAndFill(FactoryResources.Iron);
+                if (isDoubleGoods)
+                {
+                    CheckIfWagonEmptyAndFill(FactoryResources.Iron);
+                }
                 break;
             case "CottonResource":
                 CheckIfWagonEmptyAndFill(FactoryResources.Cotton);
+                if (isDoubleGoods)
+                {
+                    CheckIfWagonEmptyAndFill(FactoryResources.Cotton);
+                }
                 break;
             case "SpiceResource":
                 CheckIfWagonEmptyAndFill(FactoryResources.Spice);
+                if (isDoubleGoods)
+                {
+                    CheckIfWagonEmptyAndFill(FactoryResources.Spice);
+                }
                 break;
             case "LuxuryResource":
                 CheckIfWagonEmptyAndFill(FactoryResources.Luxury);
+                if (isDoubleGoods)
+                {
+                    CheckIfWagonEmptyAndFill(FactoryResources.Luxury);
+                }
                 break;
             case "SteelFactory":
                 CheckIfAbleToDeliver(other);
