@@ -14,6 +14,13 @@ public class UI_Wagon : MonoBehaviour
     void Start()
     {
         Manager_TrainResourceManager.wagonUpdate += OnWagonUpdate;
+        UI_UpgradeButton.OnAddCargo += OnAddCargoUI;
+    }
+
+    private void OnAddCargoUI(int index)
+    {
+        wagonButtonObject[index].gameObject.SetActive(true);
+        wagonObject[index].gameObject.transform.GetChild(0).gameObject.SetActive(true);
     }
 
     private void OnWagonUpdate(int wagonIndex, Manager_TrainResourceManager.FactoryResources factoryResource)
@@ -91,5 +98,6 @@ public class UI_Wagon : MonoBehaviour
     private void OnDisable()
     {
         Manager_TrainResourceManager.wagonUpdate -= OnWagonUpdate;
+        UI_UpgradeButton.OnAddCargo -= OnAddCargoUI;
     }
 }
