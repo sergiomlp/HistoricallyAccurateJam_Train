@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Resources;
 using UnityEngine;
+using static Mechanic_FactoryRequest;
 
 public class Mechanic_FactoryRequest : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class Mechanic_FactoryRequest : MonoBehaviour
     public event RequestEventHandler requestEvent;
     public delegate void RequestFailedEventHandler();
     public event RequestFailedEventHandler requestReset;
+    public delegate void RequestFailed();
+    public static event RequestFailed OnRequestFailed;
 
     private enum type
     {
@@ -63,7 +66,8 @@ public class Mechanic_FactoryRequest : MonoBehaviour
             if(deliveryTimer <0)
             {
                 // add static fail count event
-                requestReset();
+                requestReset(); 
+                OnRequestFailed();
                 isRequesting = false;
             }
         }

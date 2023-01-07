@@ -532,14 +532,17 @@ public class Manager_TrainResourceManager : MonoBehaviour
     {
         for (int i = 0; i < currentWagon; ++i)
         {
+            Debug.Log(amount + ""+ currentCottonResource+""+currentIronResource+""+currentSpiceResource+""+currentLuxuryResource);
             if (amount == 0) { return; }
-            if (wagonResourcesList[i].wagonResource == resource)
+            if (wagonResourcesList[i].wagonResource != resource) continue;
+            else
             {
                 wagonResourcesList[i].wagonResource = FactoryResources.Empty;
                 if (resource == FactoryResources.Iron) { currentIronResource -= 1; }
                 else if (resource == FactoryResources.Cotton) { currentCottonResource -= 1; }
                 else if (resource == FactoryResources.Spice) { currentSpiceResource -= 1; }
                 else { currentLuxuryResource -= 1; }
+                wagonUpdate(i, FactoryResources.Empty);
                 amount -= 1;
             }
         }        

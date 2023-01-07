@@ -17,10 +17,10 @@ public class UI_Wagon : MonoBehaviour
     {
         if (factoryResource == Manager_TrainResourceManager.FactoryResources.Empty)
         {
-            foreach (GameObject spite in wagonButtonObject[0].transform)
-            {
-                spite.SetActive(false);
-            }
+            wagonButtonObject[wagonIndex].transform.GetChild(0).gameObject.SetActive(false);
+            wagonButtonObject[wagonIndex].transform.GetChild(1).gameObject.SetActive(false);
+            wagonButtonObject[wagonIndex].transform.GetChild(2).gameObject.SetActive(false);
+            wagonButtonObject[wagonIndex].transform.GetChild(3).gameObject.SetActive(false);
         }
         else if (factoryResource == Manager_TrainResourceManager.FactoryResources.Iron)
         {

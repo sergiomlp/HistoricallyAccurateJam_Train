@@ -25,7 +25,7 @@ public class UI_FactoryRequest : MonoBehaviour
     private GameObject request3;
     private Image request3Sprite;
     private Text request3Value;
-    private float backgroundWidth;
+    private RectTransform backgroundWidth;
 
     private Mechanic_FactoryRequest factoryRequest;
     [SerializeField] private Sprite[] factoryResource;
@@ -63,7 +63,7 @@ public class UI_FactoryRequest : MonoBehaviour
         request3 = uiUse.transform.GetChild(3).gameObject;
         request3Sprite = uiUse.transform.GetChild(2).GetComponent<Image>();
         request3Value = uiUse.transform.GetChild(2).GetChild(0).GetComponent<Text>();
-        backgroundWidth = uiUse.GetComponent<RectTransform>().sizeDelta.x;
+        backgroundWidth = uiUse.GetComponent<RectTransform>();
     }
 
     private void HandleRequestEvent(int level, int fN, Manager_TrainResourceManager.FactoryResources fR, int sN, Manager_TrainResourceManager.FactoryResources sR, int tN, Manager_TrainResourceManager.FactoryResources tR)
@@ -122,7 +122,7 @@ public class UI_FactoryRequest : MonoBehaviour
         request1.SetActive(true);
         request2.SetActive(false);
         request3.SetActive(false);
-        backgroundWidth = 230f;
+        backgroundWidth.sizeDelta = new Vector2( 150f, 80f);
     }
 
     private void Set2Sprite(int fN, Manager_TrainResourceManager.FactoryResources fR, int sN)
@@ -147,7 +147,7 @@ public class UI_FactoryRequest : MonoBehaviour
         request1.SetActive(true);
         request2.SetActive(true);
         request3.SetActive(false);
-        backgroundWidth = 150f;
+        backgroundWidth.sizeDelta = new Vector2(230f, 80f);
     }
 
     private void Set2Sprite2(int fN, Manager_TrainResourceManager.FactoryResources fR, int sN)
@@ -172,7 +172,7 @@ public class UI_FactoryRequest : MonoBehaviour
         request1.SetActive(true);
         request2.SetActive(true);
         request3.SetActive(false);
-        backgroundWidth = 150f;
+        backgroundWidth.sizeDelta = new Vector2(230f, 80f);
     }
 
     private void Set3Sprite(int fN, Manager_TrainResourceManager.FactoryResources fR, int sN, int tN)
@@ -201,7 +201,7 @@ public class UI_FactoryRequest : MonoBehaviour
         request1.SetActive(true);
         request2.SetActive(true);
         request3.SetActive(true);
-        backgroundWidth = 305f;
+        backgroundWidth.sizeDelta = new Vector2(305f, 80f);
     }
 
     private void HandleRequestResetEvent()
