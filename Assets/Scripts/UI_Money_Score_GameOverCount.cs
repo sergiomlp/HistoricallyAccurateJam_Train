@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class UI_Money_Score_GameOverCount : MonoBehaviour
 {    
     public static int currentMoney;
-    [SerializeField] Text currentMoneyText;
+    public Text currentMoneyText;
     [SerializeField] Text incomeText;
     [SerializeField] Animation incomeAnimation;
 
