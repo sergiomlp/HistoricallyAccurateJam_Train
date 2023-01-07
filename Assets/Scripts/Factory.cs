@@ -8,7 +8,6 @@ public class Factory : MonoBehaviour
 
     [SerializeField] ScoreCounter sc;
 
-    TrainResourceManager trm;
 
     int quantityReceived=0;
 

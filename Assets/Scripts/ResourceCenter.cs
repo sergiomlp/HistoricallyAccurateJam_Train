@@ -8,7 +8,6 @@ public class ResourceCenter : MonoBehaviour
     public int quantityToGive=100;
     public int type=1;
 
-    TrainResourceManager trm;
 
     // Start is called before the first frame update
     void Start()
