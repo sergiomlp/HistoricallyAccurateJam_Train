@@ -30,8 +30,6 @@ public class Mechanic_FactoryRequest : MonoBehaviour
     public delegate void RequestFailedEventHandler();
     public event RequestFailedEventHandler requestReset;
 
-    [SerializeField] private int activiateScore;
-
     private enum type
     {
         Steel, Food, Cloth
@@ -51,32 +49,22 @@ public class Mechanic_FactoryRequest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (UI_Money_Score_GameOverCount.score >= activiateScore)
-        {
-            if (!isRequesting)
+        if (!isRequesting) 
+        { 
+            requestRandomTimer -= Time.deltaTime; 
+            if (requestRandomTimer < 0)
             {
-                requestRandomTimer -= Time.deltaTime;
-                if (requestRandomTimer < 0)
-                {
-                    GenerateRequest(FactoryType);
-                }
+                GenerateRequest(FactoryType);
             }
-            else
+        }
+        else
+        {
+            deliveryTimer-= Time.deltaTime;
+            if(deliveryTimer <0)
             {
-<<<<<<< Updated upstream
                 // add static fail count event
                 requestReset();
                 isRequesting = false;
-=======
-                deliveryTimer -= Time.deltaTime;
-                if (deliveryTimer < 0)
-                {
-                    // add static fail count event
-                    requestReset();
-                    OnRequestFailed();
-                    isRequesting = false;
-                }
->>>>>>> Stashed changes
             }
         }
     }

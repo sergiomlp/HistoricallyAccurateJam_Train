@@ -21,8 +21,6 @@ TagManager:
   - SteelFactory
   - FoodFactory
   - ClothFactory
-  - TrainStation
-  - RefilDepot
   layers:
   - Default
   - TransparentFX

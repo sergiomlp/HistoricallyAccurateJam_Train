@@ -43,12 +43,12 @@ public class UI_FactoryRequest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IsRequesting)
+        if(IsRequesting) 
         {
             uiUse.transform.position = Camera.main.WorldToScreenPoint(transform.position + offset);
             timer = factoryRequest.deliveryTimer / factoryRequest.maxDeliveryTimer;
             timerImage.fillAmount = timer;
-        }        
+        }
     }
 
     private void GetValue()
