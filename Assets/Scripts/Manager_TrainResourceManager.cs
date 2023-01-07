@@ -119,7 +119,7 @@ public class Manager_TrainResourceManager : MonoBehaviour
                 {
                     currentCottonResource++;
                 }
-                else if (cargo!= FactoryResources.Spice)
+                else if (cargo == FactoryResources.Spice)
                 {
                     currentSpiceResource++;
                 }
@@ -520,9 +520,17 @@ public class Manager_TrainResourceManager : MonoBehaviour
 
     private void Check1Cargo(Mechanic_FactoryRequest fQuest)
     {
+        Debug.Log(fQuest.firstRequestValue + " " + fQuest.firstRequestResource + " " + currentCottonResource + " " + currentIronResource+ " " + currentSpiceResource+ " " + currentLuxuryResource);
         if (fQuest.firstRequestResource == FactoryResources.Cotton && fQuest.firstRequestValue <= currentCottonResource)
         {
             DeductCargo(fQuest.firstRequestValue, FactoryResources.Cotton);
+            fQuest.SuccessfulDelivery();
+            scoreMoneyUpdate(fQuest.firstRequestValue * moneymuiltiflier);
+        }
+        else if (fQuest.firstRequestResource == FactoryResources.Cotton && fQuest.firstRequestValue <= currentCottonResource + currentLuxuryResource)
+        {
+            DeductCargo(fQuest.firstRequestValue - currentCottonResource, FactoryResources.Luxury);
+            DeductCargo(currentCottonResource, FactoryResources.Cotton);
             fQuest.SuccessfulDelivery();
             scoreMoneyUpdate(fQuest.firstRequestValue * moneymuiltiflier);
         }
@@ -532,9 +540,23 @@ public class Manager_TrainResourceManager : MonoBehaviour
             fQuest.SuccessfulDelivery();
             scoreMoneyUpdate(fQuest.firstRequestValue * moneymuiltiflier);
         }
+        else if (fQuest.firstRequestResource == FactoryResources.Iron && fQuest.firstRequestValue <= currentIronResource + currentLuxuryResource)
+        {
+            DeductCargo(fQuest.firstRequestValue - currentIronResource, FactoryResources.Luxury);
+            DeductCargo(currentIronResource, FactoryResources.Iron);
+            fQuest.SuccessfulDelivery();
+            scoreMoneyUpdate(fQuest.firstRequestValue * moneymuiltiflier);
+        }
         else if (fQuest.firstRequestResource == FactoryResources.Spice && fQuest.firstRequestValue <= currentSpiceResource)
         {
             DeductCargo(fQuest.firstRequestValue, FactoryResources.Spice);
+            fQuest.SuccessfulDelivery();
+            scoreMoneyUpdate(fQuest.firstRequestValue * moneymuiltiflier);
+        }
+        else if (fQuest.firstRequestResource == FactoryResources.Spice && fQuest.firstRequestValue <= currentSpiceResource + currentLuxuryResource)
+        {
+            DeductCargo(fQuest.firstRequestValue - currentSpiceResource, FactoryResources.Luxury);
+            DeductCargo(currentSpiceResource, FactoryResources.Spice);
             fQuest.SuccessfulDelivery();
             scoreMoneyUpdate(fQuest.firstRequestValue * moneymuiltiflier);
         }

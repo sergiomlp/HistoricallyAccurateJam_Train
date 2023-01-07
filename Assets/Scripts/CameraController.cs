@@ -56,7 +56,6 @@ public class CameraController : MonoBehaviour
         }
 
         Vector2 mousePos = Input.mousePosition;
-        Debug.Log(mousePos);
         // Calculate screen size, ratio
 
         if(mousePos.x / Screen.width <= 0.05f )
