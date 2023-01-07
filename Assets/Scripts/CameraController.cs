@@ -118,14 +118,14 @@ public class CameraController : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.Q))
-        {
-            newRotation *= Quaternion.Euler(Vector3.up * rotationAmount);
-        }
-        if (Input.GetKey(KeyCode.E))
-        {
-            newRotation *= Quaternion.Euler(Vector3.up * -rotationAmount);
-        }
+        // if (Input.GetKey(KeyCode.Q))
+        // {
+        //     newRotation *= Quaternion.Euler(Vector3.up * rotationAmount);
+        // }
+        // if (Input.GetKey(KeyCode.E))
+        // {
+        //     newRotation *= Quaternion.Euler(Vector3.up * -rotationAmount);
+        // }
 
         // if(Input.GetKey(KeyCode.R))
         // {
@@ -137,7 +137,7 @@ public class CameraController : MonoBehaviour
         // }
 
         transform.position = Vector3.Lerp(transform.position, newPosition, Time.deltaTime * movementTime);
-        transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, Time.deltaTime * movementTime);
+        //transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, Time.deltaTime * movementTime);
         cameraTransform.localPosition = Vector3.Lerp(cameraTransform.localPosition, newZoom, Time.deltaTime * movementTime);
     }
 }
