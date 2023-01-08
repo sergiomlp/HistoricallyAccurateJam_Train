@@ -79,7 +79,10 @@ public class UI_FactoryRequest : MonoBehaviour
             {
                 Set1Sprite(fN, fR);
             }
-            Set2Sprite(fN, fR,sN);
+            else
+            {
+                Set2Sprite(fN, fR, sN);
+            }
         }
         else
         {
@@ -191,7 +194,7 @@ public class UI_FactoryRequest : MonoBehaviour
         {
             request1Sprite.sprite = factoryResource[1];
             request2Sprite.sprite = factoryResource[2];
-            request3Sprite.sprite = factoryResource[3];
+            request3Sprite.sprite = factoryResource[0];
         }
         else
         {
