@@ -12,17 +12,10 @@ public class destinationSensor : MonoBehaviour
         detectedDestination=null;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag=="traindestination")
         {
-            Debug.Log("destination detected");
             detectedDestination = other.gameObject;
         }
     }
