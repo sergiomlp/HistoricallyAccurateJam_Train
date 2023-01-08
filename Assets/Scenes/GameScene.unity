@@ -20673,6 +20673,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6363028636755138101, guid: 2eb8d8c6d1b5c704faa7f322aa792cf3, type: 3}
+      propertyPath: maxspeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6363028636755138101, guid: 2eb8d8c6d1b5c704faa7f322aa792cf3, type: 3}
       propertyPath: turningSpeed
       value: 1000
       objectReference: {fileID: 0}
@@ -36081,8 +36085,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 1, y: 1, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &8881280139243597355
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36149,7 +36153,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0

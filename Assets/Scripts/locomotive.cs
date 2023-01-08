@@ -25,11 +25,6 @@ public class locomotive : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void OnAwake()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
