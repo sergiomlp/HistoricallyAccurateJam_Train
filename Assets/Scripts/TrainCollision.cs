@@ -21,6 +21,7 @@ public class TrainCollision : MonoBehaviour
         {
             UI_CoalMeter.coalRemain = UI_CoalMeter.coalMax;
             UI_CoalMeter.coalTimer = 30f;
+            Manager_Audio.GetInstance().StationBell.Play();
         }
         else if (other.tag == "RefilDepot")
         {

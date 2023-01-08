@@ -274,9 +274,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487d068fa9403e048ace6d95b7d4a18d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trainHead: {fileID: 0}
   speed: 3
+  maxspeed: 10
   turningSpeed: 2
   destinationSensor: {fileID: 2940483114774364680}
+  isWagon: 0
+  joint: {fileID: 0}
 --- !u!65 &7431917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -302,8 +306,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26c1cfc64b7596e4a833d989e0d40a8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quantity: 0
-  type: 1
+  moneymuiltiflier: 1
+  isDoubleGoods: 0
 --- !u!114 &7431921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,6 +320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 801da811df3d57348a7b6ed26196f189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coalFill: {fileID: 0}
 --- !u!1001 &2426073442761441572
 PrefabInstance:
   m_ObjectHideFlags: 0

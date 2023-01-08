@@ -162,7 +162,7 @@ public class UI_UpgradeButton : MonoBehaviour
                 }
                 else
                 {
-                    upBrakeLevelText.text = "Lv. " + upBrakeLevelText.ToString();
+                    upBrakeLevelText.text = "Lv. " + currentbrakeLevel.ToString();
                     upBrakeCostText.text = currentbrakeCost.ToString() + "K";
                 }
             }

@@ -11,6 +11,8 @@ public class UI_Wagon : MonoBehaviour
 
     public static event Action<int> wagonEmpty;
 
+    [SerializeField] private Material[] wagonMaterial;
+
     void Start()
     {
         Manager_TrainResourceManager.wagonUpdate += OnWagonUpdate;
@@ -32,6 +34,7 @@ public class UI_Wagon : MonoBehaviour
             wagonButtonObject[wagonIndex].transform.GetChild(1).gameObject.SetActive(false);
             wagonButtonObject[wagonIndex].transform.GetChild(2).gameObject.SetActive(false);
             wagonButtonObject[wagonIndex].transform.GetChild(3).gameObject.SetActive(false);
+            wagonObject[wagonIndex].transform.GetChild(0).GetChild(0).GetComponent<SkinnedMeshRenderer>().enabled = false;
         }
         else if (factoryResource == Manager_TrainResourceManager.FactoryResources.Iron)
         {
@@ -39,6 +42,8 @@ public class UI_Wagon : MonoBehaviour
             wagonButtonObject[wagonIndex].transform.GetChild(1).gameObject.SetActive(false);
             wagonButtonObject[wagonIndex].transform.GetChild(2).gameObject.SetActive(true);
             wagonButtonObject[wagonIndex].transform.GetChild(3).gameObject.SetActive(false);
+            wagonObject[wagonIndex].transform.GetChild(0).GetChild(0).GetComponent<SkinnedMeshRenderer>().material = wagonMaterial[0];
+            wagonObject[wagonIndex].transform.GetChild(0).GetChild(0).GetComponent<SkinnedMeshRenderer>().enabled = true;
         }
         else if (factoryResource == Manager_TrainResourceManager.FactoryResources.Cotton)
         {
@@ -46,6 +51,8 @@ public class UI_Wagon : MonoBehaviour
             wagonButtonObject[wagonIndex].transform.GetChild(1).gameObject.SetActive(false);
             wagonButtonObject[wagonIndex].transform.GetChild(2).gameObject.SetActive(false);
             wagonButtonObject[wagonIndex].transform.GetChild(3).gameObject.SetActive(false);
+            wagonObject[wagonIndex].transform.GetChild(0).GetChild(0).GetComponent<SkinnedMeshRenderer>().material = wagonMaterial[1];
+            wagonObject[wagonIndex].transform.GetChild(0).GetChild(0).GetComponent<SkinnedMeshRenderer>().enabled = true;
         }
         else if (factoryResource == Manager_TrainResourceManager.FactoryResources.Spice)
         {
@@ -53,6 +60,8 @@ public class UI_Wagon : MonoBehaviour
             wagonButtonObject[wagonIndex].transform.GetChild(1).gameObject.SetActive(true);
             wagonButtonObject[wagonIndex].transform.GetChild(2).gameObject.SetActive(false);
             wagonButtonObject[wagonIndex].transform.GetChild(3).gameObject.SetActive(false);
+            wagonObject[wagonIndex].transform.GetChild(0).GetChild(0).GetComponent<SkinnedMeshRenderer>().material = wagonMaterial[2];
+            wagonObject[wagonIndex].transform.GetChild(0).GetChild(0).GetComponent<SkinnedMeshRenderer>().enabled = true;
         }
         else
         {
@@ -60,6 +69,8 @@ public class UI_Wagon : MonoBehaviour
             wagonButtonObject[wagonIndex].transform.GetChild(1).gameObject.SetActive(false);
             wagonButtonObject[wagonIndex].transform.GetChild(2).gameObject.SetActive(false);
             wagonButtonObject[wagonIndex].transform.GetChild(3).gameObject.SetActive(true);
+            wagonObject[wagonIndex].transform.GetChild(0).GetChild(0).GetComponent<SkinnedMeshRenderer>().material = wagonMaterial[3];
+            wagonObject[wagonIndex].transform.GetChild(0).GetChild(0).GetComponent<SkinnedMeshRenderer>().enabled = true;
         }
     }
 

@@ -14,6 +14,7 @@ public class Manager_Audio : MonoBehaviour
     public AudioSource trainHorn;
     public AudioSource ResocureGet;
     public AudioSource RequestSound;
+    public AudioSource StationBell;
 
     private void Start()
     {
