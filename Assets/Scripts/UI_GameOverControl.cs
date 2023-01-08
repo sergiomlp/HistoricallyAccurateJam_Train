@@ -36,7 +36,7 @@ public class UI_GameOverControl : MonoBehaviour
     private void GameOver()
     {
         trainHeadLoco.maxspeed = 0;
-        gdpText.text = "£ " + UI_Money_Score_GameOverCount.score*1000;
+        gdpText.text = "£ " + UI_Money_Score_GameOverCount.score*10;
         gameOverUI.SetActive(true);
     }
 
