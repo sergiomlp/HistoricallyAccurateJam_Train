@@ -36373,7 +36373,7 @@ MonoBehaviour:
   trainHead: {fileID: 0}
   speed: 10
   maxspeed: 10
-  turningSpeed: 200
+  turningSpeed: 1000
   destinationSensor: {fileID: 8881280139243597359}
   isWagon: 0
   joint: {fileID: 0}
