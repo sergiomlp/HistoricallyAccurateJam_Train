@@ -153,6 +153,7 @@ public class UI_UpgradeButton : MonoBehaviour
                 UI_Money_Score_GameOverCount.currentMoney -= currentbrakeCost;
                 moneyUpdate.currentMoneyText.text = UI_Money_Score_GameOverCount.currentMoney.ToString() + "K";
                 UI_TrainBrakeController.brakeAccelSpeed -= 0.5f;
+                currentbrakeLevel++;
                 currentbrakeCost += 2;
                 if (currentbrakeLevel == 5)
                 {
