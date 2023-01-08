@@ -33,7 +33,12 @@ public class UI_TrainBrakeController : MonoBehaviour
                 trainHead.speed = Mathf.Lerp(trainHead.speed, trainHead.maxspeed, timer / brakeAccelSpeed);
                 timer += Time.deltaTime;
             }
-        }        
+        }  
+        
+        if(Input.GetKeyDown(KeyCode.Space)) 
+        {
+            Brakecontrol();
+        }
     }
 
     public void Brakecontrol()
