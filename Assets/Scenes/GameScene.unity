@@ -29008,7 +29008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requestUIPrefab: {fileID: 2990685814753298641, guid: 4a1d2281f4c56164b999a90e2b382024, type: 3}
-  offset: {x: 0, y: 15, z: 0}
+  offset: {x: 5, y: 15, z: 0}
   HUDcanvas: {fileID: 1128616511}
   IsRequesting: 0
   factoryResource:
