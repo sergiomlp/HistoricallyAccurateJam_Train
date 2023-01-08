@@ -20702,7 +20702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6363028637001253751, guid: 2eb8d8c6d1b5c704faa7f322aa792cf3, type: 3}
       propertyPath: m_Size.z
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6363028637001253751, guid: 2eb8d8c6d1b5c704faa7f322aa792cf3, type: 3}
       propertyPath: m_Center.z
@@ -36085,7 +36085,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1.5}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &8881280139243597355
 MeshRenderer:
